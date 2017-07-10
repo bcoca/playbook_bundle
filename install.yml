@@ -1,0 +1,7 @@
+- hosts: "{{controller|default('localhost')}}"
+  tasks:
+    - debug: msg="Begin installing"
+
+- hosts: "{{targets|default('all')}}"
+  tasks:
+    - debug: msg="Begin installing on remotes"
